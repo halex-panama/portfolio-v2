@@ -61,10 +61,15 @@ const About = () => {
             <motion.a
               variants={slideIn}
               href="https://www.linkedin.com/in/halexando-panama-putra-0305b1291/"
+              className="hover:text-primary-button"
             >
               <FaLinkedin size={32} />
             </motion.a>
-            <motion.a variants={slideIn} href="https://github.com/halex-panama">
+            <motion.a
+              variants={slideIn}
+              href="https://github.com/halex-panama"
+              className="hover:text-primary-button"
+            >
               <FaGithub size={32} />
             </motion.a>
           </motion.div>
