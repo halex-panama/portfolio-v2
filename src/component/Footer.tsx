@@ -1,6 +1,12 @@
 import { useLenis } from "lenis/react";
+import { useEffect, useState } from "react";
 
 const Footer = () => {
+  const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
   const lenis = useLenis();
   return (
     <footer className="w-full py-14 text-primary-text bg-light-bg/20">
@@ -36,7 +42,7 @@ const Footer = () => {
             </li>
           </ul>
           <span className="text-lg text-gray-500 text-center block">
-            ©Halexando Panama 2024, All rights reserved.
+            ©Halexando Panama {currentYear}, All rights reserved.
           </span>
         </div>
       </div>
